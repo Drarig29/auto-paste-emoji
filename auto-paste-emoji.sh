@@ -16,7 +16,7 @@ set +e
 while clipnotify || true;
 do
   log "** Selection changed"
-  
+
   emoji_picker=$(xdotool search -class plasma.emojier || echo 0)
   clipboard=$(xclip -o -sel clip || echo "<empty clipboard>")
 
@@ -24,7 +24,7 @@ do
     log "* Emoji picker found ($emoji_picker) : closing..."
     xdotool key --window $emoji_picker Escape Escape
 
-    sleep 0.2
+    sleep 0.3
 
     log "> Paste emoji: $clipboard"
     xdotool key ctrl+v
