@@ -1,5 +1,11 @@
 #!/bin/bash
 
+for pid in $(pgrep -f $0); do
+    if [ $pid != $$ ]; then
+        kill $pid
+    fi
+done
+
 log() {
   printf "[$$] $1" | systemd-cat
   echo "$1"
