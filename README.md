@@ -12,7 +12,9 @@ Dependencies:
 
 ## Usage
 
-Download this script or clone the repository and symlink it somewhere like `/usr/bin/auto-paste-emoji`:
+Download this script or clone the repository.
+
+Then, symlink it somewhere like `/usr/bin/auto-paste-emoji`:
 
 ```bash
 ln -s ~/path/to/auto-paste-emoji.sh /usr/bin/auto-paste-emoji
