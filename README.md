@@ -47,4 +47,8 @@ exec /usr/bin/auto-paste-emoji &
   - For some reason, closing the window kills the whole process and the shortcut to open the picker won't respond afterwards
   - We simulate pressing <kbd>Esc</kbd> twice because if you used the search feature in the picker, pressing <kbd>Esc</kbd> will clear the search string, so we need a second key stroke
 
-You can view logs in `journalctl` by grep-ing "cat": `journalctl -b | grep "cat\["`
+You can view the logs using `journalctl`: 
+
+```bash
+journalctl -b | grep -E "\[$(pidof -x /usr/bin/auto-paste-emoji)\]"
+```
